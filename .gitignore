@@ -46,3 +46,4 @@ packages/test-harness/testSubsetGrep.properties
 
 cursorless.nvim/node/cursorless-neovim
 cursorless.nvim/node/test-harness
+cursorless.nvim/test/xdg/
