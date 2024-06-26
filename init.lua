@@ -12,9 +12,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+  -- Allows title detection by neovim-talon while testing
   "hands-free-vim/talon.nvim",
+  -- ?? Why is this needed
   "vim-scripts/BufOnly.vim",
+  -- Allows better mode detection while testing. This is useful because talon.nvim sets cmdheight = 0
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
 })
+
+-- Allows better range selection debugging, since we can see single character ranges.
+vim.o.guicursor = "a:hor20-blink100"
 
 local repo_root = os.getenv("CURSORLESS_REPO_ROOT")
 if not repo_root then
@@ -24,3 +32,4 @@ vim.opt.runtimepath:append(repo_root .. "/cursorless.nvim")
 
 require("talon").setup()
 require("cursorless").setup()
+require("lualine").setup()
