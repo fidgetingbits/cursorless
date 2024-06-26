@@ -71,31 +71,31 @@ local function configure_command_server_shortcut()
   -- https://www.reddit.com/r/neovim/comments/pt92qn/mapping_cd_in_terminal_mode/
   vim.api.nvim_set_keymap(
     "i",
-    "<C-S-F12>",
+    "<C-`>",
     "<cmd>lua vim.fn.CommandServerRunCommand()<CR>",
     { noremap = true }
   )
   vim.api.nvim_set_keymap(
     "n",
-    "<C-S-F12>",
+    "<C-`>",
     "<cmd>lua vim.fn.CommandServerRunCommand()<CR>",
     { noremap = true }
   )
   vim.api.nvim_set_keymap(
     "c",
-    "<C-S-F12>",
+    "<C-`>",
     "<cmd>lua vim.fn.CommandServerRunCommand()<CR>",
     { noremap = true }
   )
   vim.api.nvim_set_keymap(
     "v",
-    "<C-S-F12>",
+    "<C-`>",
     "<cmd>lua vim.fn.CommandServerRunCommand()<CR>",
     { noremap = true }
   )
   vim.api.nvim_set_keymap(
     "t",
-    "<C-S-F12>",
+    "<C-`>",
     "<cmd>lua vim.fn.CommandServerRunCommand()<CR>",
     { noremap = true }
   )
