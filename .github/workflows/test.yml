@@ -60,8 +60,7 @@ jobs:
       - name: Run cursorless.nvim busted lua tests
         uses: lunarmodules/busted@v2.2.0
         with:
-          args: "--run unit"
-        working-directory: ./cursorless.nvim
+          args: "-C cursorless.nvim -lua= ./cursorless.nvim/test/nvim-shim.sh --run unit"
 
         if: runner.os == 'Linux' && matrix.app_version == 'stable'
         id: neovimLuaTests
