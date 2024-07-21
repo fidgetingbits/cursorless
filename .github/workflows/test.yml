@@ -59,6 +59,8 @@ jobs:
       #          NEOVIM_PATH: ${{ steps.vim.outputs.executable }}
       - name: Set up Lua
         uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: "luajit-2.1.0-beta3"
         if: runner.os == 'Linux' && matrix.app_version == 'stable'
 
       - name: Set up Luarocks
