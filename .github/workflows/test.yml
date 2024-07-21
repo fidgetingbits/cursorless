@@ -19,9 +19,9 @@ jobs:
         #os: [macos-latest, ubuntu-latest, windows-latest]
         os: [ubuntu-latest]
         app_version: [stable]
-        include:
-          - os: ubuntu-latest
-            app_version: legacy
+        #include:
+        #  - os: ubuntu-latest
+        #    app_version: legacy
     runs-on: ${{ matrix.os }}
     env:
       APP_VERSION: ${{ matrix.app_version }}

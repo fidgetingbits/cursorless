@@ -14,7 +14,7 @@ dependency_folder="${XDG_DATA_HOME}/nvim/site/pack/testing/start/"
 plugin_folder="${XDG_CONFIG_HOME}/nvim/plugin/"
 
 mkdir -p "${plugin_folder}" "${XDG_STATE_HOME}" "${dependency_folder}"
-echo "${PWD}"
+echo "${PWD}" >&2
 ln -sf "${PWD}" "${dependency_folder}/cursorless.nvim"
 
 # Link in standalone helper functions we want all tests to be able to call
